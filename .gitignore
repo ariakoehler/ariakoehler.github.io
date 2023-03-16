@@ -11,3 +11,6 @@ ehthumbs.db
 Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
+
+_posts/template.md
+_posts/markdown-syntax.md
