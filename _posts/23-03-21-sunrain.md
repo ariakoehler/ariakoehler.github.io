@@ -2,9 +2,6 @@
 layout: post
 title: Cloudbreak
 subtitle: Written 5/7/2019
-cover-img: /assets/img/
-thumbnail-img: /assets/img/
-share-img: /assets/img/
 tags: [writing, poetry]
 ---
 

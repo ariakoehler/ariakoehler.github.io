@@ -2,9 +2,6 @@
 layout: post
 title: Who the Hell Wrote This?!
 subtitle: Written 10/19/2023
-cover-img: /assets/img/
-thumbnail-img: /assets/img/
-share-img: /assets/img/
 tags: [writing, poetry]
 ---
 
