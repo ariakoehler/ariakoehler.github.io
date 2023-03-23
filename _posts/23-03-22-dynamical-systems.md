@@ -3,6 +3,7 @@ title: Estimating Dynamical Systems Parameters with Autodifferentiation Methods
 author: Aria Koehler
 subtitle: Advised by Matthew Plumlee
 bibliography: ../assets/bib/dynsys.bib
+tags: [Math, Dynamical Systems, Academics]
 ---
 
 <div style="font-size: 14px;" display="block;">
@@ -11,7 +12,7 @@ I wanted to post this here because I thought it was a bit sad that it never real
 
 I intend to write something that could serve as an introduction to this area of research at some point, mostly because I think it's neat. Nonlinear Dynamical Systems are one of those mathematical constructs that sound really scary but are shockingly easy to understand and apply. Plus this project included some usage of backpropagation outside of the context everyone seems to associate it with these days, that being Machine Learning.<br/><br/>
 
-You can find this paper in its original form, all in TeX, on my <a href="https://github.com/ariakoehler/dynamical-systems-learning/blob/main/report/report.pdf">GitHub</a>
+You can find this paper in its original form, all in TeX, on my <a href="https://github.com/ariakoehler/dynamical-systems-learning/blob/main/report/report.pdf">GitHub</a>.
 </div>
 
 
@@ -27,7 +28,7 @@ issues remain when it comes to aligning the model to real-world data.
 One is the issue of parameter estimation. Though frameworks exist for
 estimating the parameters of a differential equation, the problem of
 minimizing 2-norm between a model's predictions and a given dataset is,
-in general, ill-posed[@chung]. Thus, the problem of finding a model that
+in general, ill-posed[^chung]. Thus, the problem of finding a model that
 minimizes the 2-norm still has challenges, even moreso for the problem
 of finding a model that is interpretable.
 
@@ -55,7 +56,7 @@ minimized.
 One advantage of this approach in the context of a general problem is
 the ability to make use of both domain knowledge--through incorporation
 of the initial model $$f_0$$--and data by way of learning
-$$m^*(x)$$[@levine].
+$$m^*(x)$$[^levine].
 
 These are far-reaching issues, and we will not try to solve them all in
 this article, but we think that approaching them as a unified problem
@@ -78,9 +79,9 @@ approach has several advantages, in particular that it is able to
 account for hierarchical effects. In the particular problem considered,
 there are both population effects and individual effects, which can be
 considered at the same time with their hierarchical structure
-intact.[@gelman] However, this method also requires performing MCMC,
+intact.[^gelman] However, this method also requires performing MCMC,
 which does not always converge in easily predictable ways, and its
-convergence can rarely be verified.[@vehtari] Primarily for this reason,
+convergence can rarely be verified.[^vehtari] Primarily for this reason,
 we will favor methods that do not involve performing MCMC.
 
 More recently, more methods have arisen which rely on basis function
@@ -89,14 +90,14 @@ problem as a nested optimization. In an outer problem, updates are
 performed on the model parameters, optimizing the Euclidean distance
 between the model's predictions and observed data. The inner problem
 finds the coefficients for the basis functions which solve the
-differential equations for the current parameters.[@ramsay]
+differential equations for the current parameters.[^ramsay]
 
 Even more recently, Levine and Stuart (2021) use techniques from machine
 learning to predict unobserved states that may affect the observed state
 vector. The methods are remarkably powerful and show additionally that
 starting with an educated guess of the true model can cause RNN
 predictions to reach optimality much faster than when they are given
-only data.[@levine] However, there are several questions that the
+only data.[^levine] However, there are several questions that the
 authors do not answer. For example, it is not clear that these
 parameters are uniquely interpretable. The method might have terms that
 cancel each other, and the given model may be absorbed in the estimated
@@ -110,7 +111,7 @@ estimates are. For example, Chkrebtii, et al. (2016) use a Bayesian
 method that conditions on model uncertainty in order to solve the system
 itself. They also use a quantification of model information to prove
 convergence properties of their algorithm, which could be challenging to
-show for other methods.[@chkrebtii] However, the use of Bayesian methods
+show for other methods.[^chkrebtii] However, the use of Bayesian methods
 can lead to a variety of practical problems which the proposed methods
 will try to avoid, as noted above.
 
@@ -121,7 +122,7 @@ an estimated parameter typically comes packaged with a measure of
 variance. For example, Cockayne, et al. (2019) lays out a set of
 reasonable conditions under which the solution to a Dynamical Systems
 attained using Bayesian methods can give the average-case error of the
-parameter estimates.[@cockayne]
+parameter estimates.[^cockayne]
 
 # Current Project
 
@@ -153,7 +154,7 @@ Our approach to the problem of estimating $$\eta$$ will leverage recent
 developments in the fields of machine learning and numerical
 optimization, in particular the `autograd` functionality of `torch`,
 which allows automatic computation of derivatives with respect to the
-parameters.[@biggs] Those derivatives can then be used to perform
+parameters.[^biggs] Those derivatives can then be used to perform
 backpropagation in order to learn $$\eta^*$$ through iterated
 approximations $$\eta$$.
 
@@ -222,7 +223,7 @@ $$\begin{aligned}
   \dot{R} &= -\frac{1}{c} \left( V - a - b R \right)\end{aligned}$$
 
 The specific history of this system, as well as a description of its
-behavior of it are given in [@ramsay]. Take $$a=0.2,\, b=0.2,\, c=3.0$$,
+behavior of it are given in [^ramsay]. Take $$a=0.2,\, b=0.2,\, c=3.0$$,
 which produces oscillations in the state vector.
 
 <img
@@ -275,7 +276,7 @@ rather than numerical evaluations of performance.
 
 The Fitzhugh-Nagumo system exhibits oscillations for the chosen
 parameters and has stable behavior for small perturbations of its
-parameters.[@ramsay] However, perturbing the system with terms outside
+parameters.[^ramsay] However, perturbing the system with terms outside
 of the usual model is less well-understood. Thus, it will make a good
 test of how well the learning algorithm behaves in regions of parameter
 space where the function's behavior is not well known.
@@ -410,3 +411,22 @@ parameters of Dynamical Systems.
 
 The code used to obtain the results seen here can be found at
 <https://github.com/ariakoehler/dynamical-systems-learning>.
+
+
+# Citations
+
+[^chung]: Matthias Chung, Mickaël Binois, Robert B. Gramacy, Johnathan M. Bardsley, David J. Moquin, Amanda P. Smith, and Amber M. Smith. Parameter and uncertainty esitmation for dynamical systems using surrogate staochastic processes. SIAM Journal of Scientific Computing, 41(4):A2212 – A2238, 2019.
+
+[^levine]: Matthew E. Levine and Andrew M. Stuart. A framework for machine learning of model error in dynamical systems, 2021.
+
+[^gelman]: Andrew Gelman, Frederic Bois, and Jiming Jiang. Physiological pharmacokinetic analysis using population modeling and informative prior distributions. Journal of the American Statistical Association, 91(436):1400–1412, 1996.
+
+[^vehtari]: Aki Vehtari, Andrew Gelman, Daniel Simpson, Bob Carpenter, and Paul-Christian Brkner. Rank-Normalization, Folding, and Localization: An Improved R for Assessing Convergence of MCMC (with Discussion). Bayesian Analysis, 16(2):667 – 718, 2021.
+
+[^ramsay]: J. O. Ramsay, G. Hooker, D. Campbell, and J. Cao. Parameter estimation for differential equations: a generalized smoothing approach. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 69(5):741–796, 2007.
+
+[^chkrebtii]: Oksana A. Chkrebtii, David A. Campbell, Ben Calderhead, and Mark A. Girolami. Bayesian Solution Uncertainty Quantification for Differential Equations. Bayesian Analysis, 11(4):1239 – 1267, 2016.
+
+[^cockayne]: Jon Cockayne, Chris J. Oates, T. J. Sullivan, and Mark Girolami. Bayesian probabilistic numerical methods. SIAM Review, 61(4):756–789, 2019.
+
+[^biggs]: Michael Bartholomew-Biggs, Steven Brown, Bruce Christianson, and Laurence Dixon. Automatic differentiation of algorithms. Journal of Computational and Applied Mathematics, 124(1):171–190, 2000. Numerical Analysis 2000. Vol. IV: Optimization and Nonlinear Equations.
