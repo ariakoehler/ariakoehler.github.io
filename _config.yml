@@ -124,17 +124,50 @@ navbar-var-length: false
 
 # Personalize the colors in your website. Color values can be any valid CSS color
 
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-footer-hover-col: "#0085A1"
+navbar-col: "#344e41"
+navbar-text-col: "#000000"
+navbar-border-col: "#427973"
+page-col: "#acb78e"
+text-col: "#000000"
+link-col: "#427973"
+hover-col: "#427973"
+footer-col: "#344e41"
+footer-text-col: "#000000"
+footer-link-col: "#427973"
+footer-hover-col: "#427973"
+
+
+# ======= winsumoke3 Color Palette ======
+# https://www.color-hex.com/color-palette/1023581
+#acb78e
+#000000
+#427973
+#749b63
+#344e41
+# ======================================
+
+
+# === Muted Greens ===
+# https://www.color-hex.com/color-palette/1023712
+#264822
+#2f592a
+#386b32
+#417c3a
+#4a8d42
+# ====================
+
+
+# navbar-col: "#EAEAEA"
+# navbar-text-col: "#404040"
+# navbar-border-col: "#DDDDDD"
+# page-col: "#FFFFFF"
+# text-col: "#404040"
+# link-col: "#008AFF"
+# hover-col: "#0085A1"
+# footer-col: "#EAEAEA"
+# footer-text-col: "#777777"
+# footer-link-col: "#404040"
+# footer-hover-col: "#0085A1"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of color
