@@ -12,5 +12,4 @@ In some ways putting this out to the internet is a rebellion against having to d
 
 But this was supposed to be about me, right?
 
-I guess it is, in a sense. The phrase "about me" is a little funny. Historically the word ["about"](https://www.etymonline.com/word/about#etymonline_v_63) had more of an implication of physical nearness, closer to our modern usage of "around." This page orbits around me, recording views from different angles but never touching me.
-
+I guess it is, in a sense. The phrase "about me" is a little funny. Historically the word ["about"](https://www.etymonline.com/word/about#etymonline_v_63) had more of an implication of physical nearness, closer to our modern usage of "around." This page orbits around me, recording views from different angles but never touching me. So welcome. I invite you to take a look around, see some of the things I've chosen to externalize.
