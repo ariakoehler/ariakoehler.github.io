@@ -4,7 +4,7 @@ title: About me
 subtitle: 
 ---
 
-Hi there! I'm Aria, I write, I do math, I work with (D)ata, I bleed, I weep, I sweat. In my spare time I listen to music, read books, play Magic: the Gathering and Dungeons and Dragons, go for runs, and generally try to stay afloat in this profoundly strange time we live in. I try not to define myself in terms of any of those things, but I find it a little bit magical that I could flit between a dozen different groups, all of whom would identify me different.
+Hi there! I'm Aria, I write, I do math, I work with (D)ata, I bleed, I weep, I sweat. In my spare time I listen to music, read books, play Magic: the Gathering and Dungeons and Dragons, go for runs, and generally try to stay afloat in this profoundly strange time we live in. I try not to define myself in terms of any of those things, but I find it a little bit magical that I get to flit between a dozen different groups, all of whom would identify me differently.
 
 While we're simply listing things about ourselves, I guess it's relevant that I have both a B.S. and an M.S. in Applied Mathematics, with a scattering of minors across a bunch of disparate topics. Don't worry, this page won't devolve into simply listing pieces of paper I have because I find that to not be a terribly useful way to establish credibility or identity. Besides, if you care you should probably just be looking at my LinkedIn anyways.
 
